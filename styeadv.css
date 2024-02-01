@@ -1,0 +1,212 @@
+body
+{
+	font-family: 'PT Sans',sans-serif;
+	background-color: #3D3F4F;
+	margin: 0;
+	color: #FFFFFF;
+	line-height: 1.6;
+}
+
+a
+{
+	text-decoration: none;
+	color: #CECEDF;
+}
+
+#showcase
+{
+	margin: 0;
+	padding: 0;
+	background: url(https://miro.medium.com/v2/resize:fit:2000/1*g2PpS37hxd1glUEjKs13vg.jpeg) center/cover;	/*url of the background image*/
+	
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;				/*vh means viewport height i.e puts the image to fit the user's view*/
+	position: relative;
+	overflow: hidden;			
+
+}	
+
+#showcase .specific
+{
+	margin-top: 25vh;
+}
+
+#showcase .general
+{
+	color: #000;
+}
+
+#showcase h1
+{
+	font-size: 4rem;
+	margin-bottom: 0;
+	text-align: left;
+	font-family: monospace;
+	animation: color-change 2s infinite;
+	animation: rotate 3s none 1;
+
+}
+
+/* @keyframes color-change
+{
+  0% { color: #000; }
+  50% { color: #fff; }
+  100% { color: #000; }
+}
+@keyframes rotate 
+{
+  from { 
+    transform-origin: top left;
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform-origin: top left;
+    transform: rotate(360deg); 
+    
+  }
+} */
+#showcase h2
+{
+	font-size: 4rem;
+	margin-top: 2px;
+	font-family: freestyle Script;
+	text-align: left;
+	margin-bottom: 3px;
+}
+
+
+nav  							 /*css for the navigation tab*/
+{
+	height: 40px;
+	width: 100%;				
+	background-color: #333333;
+	color: rgb(50, 31, 31);
+	position: fixed;
+	transition: opacity 2s;
+}
+
+nav ul{    						/*is the css for the ul in the nav*/
+	margin: 0;					
+	padding: 0;
+}
+
+nav li{							/*is the css for the li in the nav*/
+	display: inline;			/*arranges all the text in horziontal way*/ 
+	float: left;				/*puts all the text to the extreme left*/
+	border-radius:100px;
+}
+
+nav a{
+	display: inline-block;		/*makes the text in the anchor tags appear in a block*/
+	width: 100px;
+	text-align: center;			/* alings the text to the center of the created block*/
+	text-decoration: none;		
+	padding: 8px 0; 			/* 8 is for top and bottom and 0 is for left and right*/
+	color: #eee;
+}
+
+nav li:hover{
+	background-color: gray;
+}
+
+nav li:active
+{
+	opacity: 0.5;
+}
+.specific{
+	max-width: 1180px;			/*gives the browerser a idea about the max width of the page*/
+	text-align: center;			/*aligns all the text to the center*/
+	margin: 0 auto;				/*0 is for the top and bottom while auto is for right and left which automatically gives equal margin*/
+	padding: 0 3rem;
+	font-family: verdana;
+}
+
+.gen{
+	margin-top: 0;							/*gen is the class name for p in 34 and gives style to the long para*/
+	font-size: 17px;
+	font-family: Ebrima;
+	font-weight: bold;
+	line-height: 200%;
+	margin-right: 400px;
+}
+
+footer .foot_style{				/*css for the footer*/
+	display: grid;				/*diplays the items in the form of a grid i.e rows and columns*/
+	grid-gap: 20px;				/*the sapce btw the elements is providing using grid gap*/
+	grid-template-columns: repeat(4, 1fr);				/*this aligns the elements in columns (can also be alined as rows) the repeat function
+repeat(n,m fr) repets the call n times and m fractional units i.e space btw rows/columns */
+	padding: 2rem;
+	font-size: 15px;
+	text-align: left;
+}
+
+footer .foot_style ul{			/*to style the ul part of the footer section of class foot_style*/
+	list-style: none;			/*none is used to remove the style i.e removes the bullets*/
+}
+
+footer .foot_style ul li:first-child{		/*to style the li part of the ul section of class foot_style:first child applies only to the first li of ul*/
+	font-size: 20px;
+	padding-bottom: 15px;
+	border-bottom:#BAC0F7 solid 1px;
+	margin-bottom: 1rem;
+}
+
+.footer_bottom{
+	text-align: center;
+	background-color: #333;
+	padding: 2px;
+}
+
+/*this is the advanced part*/
+.section{
+	padding: 2rem 0;
+}
+
+.head{
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+.section h3{
+	font-size: 2rem;
+}
+
+:root{								/*this is used to create variables so we dont have to type the color code every time -- is used to name different variables*/
+	--primary:#b90415;
+	--primary-hover:#d3071b;
+	--secondary:#103063;
+	--secondary-hover:#143f85;
+	--light:#f4f4f4;
+
+}
+
+.btn{
+	padding: 1rem;
+	color: #fff;
+	display: inline-block;
+}
+
+.btn-primary{
+	background: var(--primary);				/*use var function so the browser knows tat its a variable */
+}
+
+.btn-primary:hover{
+	background: var(--primary-hover);
+}
+
+.btn-secondary{
+	background: var(--secondary);
+}
+
+.btn-secondary:hover{
+	background: var(--secondary-hover);
+}
+
+.text-light{
+	color: var(--light);
+}
+
+.mb{
+	margin-bottom: 1rem;		/*gives space below the start trial button*/
+}
